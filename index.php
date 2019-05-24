@@ -145,7 +145,9 @@
 </style>
 </head>
 <body onload="load()">
-
+	<?php
+		include 'navbar.php';
+	?>
 	<h1 class="title">ROCK PAPER SCISSORS</h1>
 	<div class="container" id="nickname_form">
 		<input type="text" id="nick" placeholder="nickname">
@@ -176,43 +178,6 @@
 				<button name="rock" id="rock"><img src="images/rock-btn.png"></button>
 				<button name="scissor" id="scissor"><img src="images/scissor-btn.png"></button>
 
-	<?php
-		include 'navbar.php';
-	?>
-	
-		<h1 style="text-align: center; font-size: 18pt;margin-top : 20px;">ROCK PAPER SCISSOR</h1>
-		<div class="container" id="nickname_form">
-			<input type="text" id="nick" placeholder="nickname">
-			<button id="submit">Submit nickname</button>
-		</div>
-		<div class="flex-container">
-			<div class="row">
-				<div class="col-6 col-md-4">
-					<h1>WIN</h1>
-					<h1 id="win-score">0</h1>
-				</div>
-				<div class="col-6 col-md-4">
-					<h1>TIES</h1>
-					<h1 id="tie-score">0</h1>
-				</div>
-				<div class="col-6 col-md-4">
-					<h1>LOSE</h1>
-					<h1 id="lose-score">0</h1>
-				</div>
-				<div class="col-8 col-md-6">
-					<div class="player-image"></div>
-				</div>
-				<div class="col-8 col-md-6">
-					<div class="bot-image"></div>
-				</div>
-				<div id="image-btn" class="col-12 col-md-8">
-					<button name="paper" id="paper"><img src="images/paper-btn.png"></button>
-					<button name="rock" id="rock"><img src="images/rock-btn.png"></button>
-					<button name="scissor" id="scissor"><img src="images/scissor-btn.png"></button>
-				</div>
-
-			</div>
-		</div>
 		<div class="container" id="highscore_form">
 			<h2 class="col-lg-12" style="text-align: center">High Score</h2>
 			<table class="table table-hover">
