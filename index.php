@@ -86,6 +86,11 @@
 		margin-left: auto;
 	}
 
+	img {
+		width : 208px;
+		height : 208px;
+	}
+
 	#highscore_form{
 		display: none;
 	}
@@ -96,6 +101,11 @@
 
 	/* Big tablet to 1200px */
 	@media only screen and (max-width: 1200px) and (min-width: 1024px) {
+		img {
+			width : 168px;
+			height : 168px;
+		}
+
 		.player-image{
 			width : 170px;
 			height : 170px;
@@ -108,6 +118,11 @@
 	}
 	/* Small tablet to big tablet: from 768px to 1023px */
 	@media only screen and (max-width: 1023px) and (min-width: 768px) {
+		img {
+			width : 148px;
+			height : 148px;
+		}
+
 		.player-image{
 			width : 150px;
 			height : 150px;
@@ -120,6 +135,11 @@
 	}
 	/* Small phones to small tablets: from 481px to 767px */
 	@media only screen and (max-width: 767px) and (min-width: 481px) {
+		img {
+			width : 118px;
+			height : 118px;
+		}
+
 		.player-image{
 			width : 120px;
 			height : 120px;
@@ -131,7 +151,12 @@
 		}
 	}
 	/* Small phones: from 0 to 480px */
-	@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 480px) and (min-width: 0px) {
+		img {
+			width : 78px;
+			height : 78px;
+		}
+
 		.player-image{
 			width : 80px;
 			height : 80px;
@@ -173,10 +198,10 @@
 			<div class="images">
 				<div class="bot-image"></div>
 			</div>
-			<div id="image-btn" class="col-12 col-md-12">
-				<button name="paper" id="paper"><img src="images/paper-btn.png"></button>
-				<button name="rock" id="rock"><img src="images/rock-btn.png"></button>
-				<button name="scissor" id="scissor"><img src="images/scissor-btn.png"></button>
+			<div id="image-btn" class="col-12 col-md-12" style="margin-top:20px;">
+				<button name="paper" id="paper"><img style="width: 50px; height: 50px;" src="images/paper-btn.png"></button>
+				<button name="rock" id="rock"><img style="width: 50px; height: 50px;" src="images/rock-btn.png"></button>
+				<button name="scissor" id="scissor"><img style="width: 50px; height: 50px;" src="images/scissor-btn.png"></button>
 
 		<div class="container" id="highscore_form">
 			<h2 class="col-lg-12" style="text-align: center">High Score</h2>
@@ -264,54 +289,58 @@
 
 		$("#paper").on("click", function() {
 			var rand = random();
-			$('.player-image').empty().append($('<img />', { src: "images/paper.png", style: "width : 200px; height : 200px;"}));
+			$('.player-image').empty().append($('<img />', { src: "images/paper.png" }));
 			if(rand == 1){
-				$('.bot-image').empty().append($('<img />', { src: "images/paper.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/paper.png" }));
 			}
 			else if(rand == 2){
-				$('.bot-image').empty().append($('<img />', { src: "images/rock.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/rock.png" }));
 			}
 			else if(rand == 3){
-				$('.bot-image').empty().append($('<img />', { src: "images/scissor.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/scissor.png" }));
 			}
 			check(1,rand);
 		});
 
 		$("#rock").on("click", function() {
 			var rand = random();
-			$('.player-image').empty().append($('<img />', { src: "images/rock.png", style: "width : 200px; height : 200px;"}));
+			$('.player-image').empty().append($('<img />', { src: "images/rock.png" }));
 			if(rand == 1){
-				$('.bot-image').empty().append($('<img />', { src: "images/paper.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/paper.png" }));
 			}
 			else if(rand == 2){
-				$('.bot-image').empty().append($('<img />', { src: "images/rock.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/rock.png" }));
 			}
 			else if(rand == 3){
-				$('.bot-image').empty().append($('<img />', { src: "images/scissor.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/scissor.png" }));
 			}
 			check(2,rand);
 		});
 
 		$("#scissor").on("click", function() {
 			var rand = random()
-			$('.player-image').empty().append($('<img />', { src: "images/scissor.png", style: "width : 200px; height : 200px;"}));
+			$('.player-image').empty().append($('<img />', { src: "images/scissor.png" }));
 			if(rand == 1){
-				$('.bot-image').empty().append($('<img />', { src: "images/paper.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/paper.png" }));
 			}
 			else if(rand == 2){
-				$('.bot-image').empty().append($('<img />', { src: "images/rock.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/rock.png" }));
 			}
 			else if(rand == 3){
-				$('.bot-image').empty().append($('<img />', { src: "images/scissor.png", style: "width : 200px; height : 200px;"}));
+				$('.bot-image').empty().append($('<img />', { src: "images/scissor.png" }));
 			}
 			check(3,rand);
 		});
 
 		$("#submit").on("click",function() {
-			var nick = $("#nick").val();
-			$('.flex-container').css('display','flex');
-			$('#stop').css('display','inline');
-			localStorage.setItem("nickname",nick);
+			if($("#nick").val() == ""){
+				alert("PLEASE INSERT A NAME");
+			}else{
+				var nick = $("#nick").val();
+				$('.flex-container').css('display','flex');
+				$('#stop').css('display','inline');
+				localStorage.setItem("nickname",nick);
+			}
 		})
 
 		$("#stop").on("click",function() {
