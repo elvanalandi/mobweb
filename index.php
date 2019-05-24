@@ -8,22 +8,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<style>
 
-	/* Big tablet to 1200px */
-	@media only screen and (max-width: 1200px) {
-	}
-	/* Small tablet to big tablet: from 768px to 1023px */
-	@media only screen and (max-width: 1023px) {
-	}
-	/* Small phones to small tablets: from 481px to 767px */
-	@media only screen and (max-width: 767px) {
-	}
-	/* Small phones: from 0 to 480px */
-	@media only screen and (max-width: 480px) {
+	body{
+		font-size: calc(8px + 1vw);
+		line-height: calc(1.1em + 0.5vw);
 	}
 
-	body{
-		font-size: calc(16px + 1vw);
+	h1{
+		font-size: calc(20px + 2vw);
 		line-height: calc(1.1em + 0.5vw);
+	}
+
+	.title {
+		text-align: center;
+		font-size: calc(24px + 1vw);
+		margin-top : 20px;
 	}
 
 	.flex-container {
@@ -45,16 +43,40 @@
 		align-items: center;
 	}
 
+	.winlose{
+		vertical-align: middle;
+		text-align: center;
+		width:33%;
+		height: 15%;
+	}
+
+	.tie{
+		vertical-align: middle;
+		text-align: center;
+		width:33%;
+		height: 15%;
+	}
+
+	.images{
+		vertical-align: middle;
+		width:50%;
+		height: 25%;
+	}
+
 	.player-image{
 		width : 210px;
 		height : 210px;
 		border : solid 1px black;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	.bot-image{
 		width : 210px;
 		height : 210px;
 		border : solid 1px black;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	#highscore_form{
@@ -64,35 +86,84 @@
 	#stop{
 		display: none;
 	}
+
+	/* Big tablet to 1200px */
+	@media only screen and (max-width: 1200px) and (min-width: 1024px) {
+		.player-image{
+			width : 170px;
+			height : 170px;
+		}
+
+		.bot-image{
+			width : 170px;
+			height : 170px;
+		}
+	}
+	/* Small tablet to big tablet: from 768px to 1023px */
+	@media only screen and (max-width: 1023px) and (min-width: 768px) {
+		.player-image{
+			width : 150px;
+			height : 150px;
+		}
+
+		.bot-image{
+			width : 150px;
+			height : 150px;
+		}
+	}
+	/* Small phones to small tablets: from 481px to 767px */
+	@media only screen and (max-width: 767px) and (min-width: 481px) {
+		.player-image{
+			width : 120px;
+			height : 120px;
+		}
+
+		.bot-image{
+			width : 120px;
+			height : 120px;
+		}
+	}
+	/* Small phones: from 0 to 480px */
+	@media only screen and (max-width: 480px) {
+		.player-image{
+			width : 80px;
+			height : 80px;
+		}
+
+		.bot-image{
+			width : 80px;
+			height : 80px;
+		}
+	}
 </style>
 </head>
 <body onload="load()">
-	<h1 style="text-align: center; font-size: 18pt;margin-top : 20px;">ROCK PAPER SCISSOR</h1>
+	<h1 class="title">ROCK PAPER SCISSORS</h1>
 	<div class="container" id="nickname_form">
 		<input type="text" id="nick" placeholder="nickname">
 		<button id="submit">Submit nickname</button>
 	</div>
 	<div class="flex-container">
 		<div class="row">
-			<div class="col-6 col-md-4">
+			<div class="winlose">
 				<h1>WIN</h1>
 				<h1 id="win-score">0</h1>
 			</div>
-			<div class="col-6 col-md-4">
-				<h1>TIES</h1>
-				<h1 id="tie-score">0</h1>
-			</div>
-			<div class="col-6 col-md-4">
+			<div class="winlose">
 				<h1>LOSE</h1>
 				<h1 id="lose-score">0</h1>
 			</div>
-			<div class="col-8 col-md-6">
+			<div class="tie">
+				<h1>TIES</h1>
+				<h1 id="tie-score">0</h1>
+			</div>
+			<div class="images">
 				<div class="player-image"></div>
 			</div>
-			<div class="col-8 col-md-6">
+			<div class="images">
 				<div class="bot-image"></div>
 			</div>
-			<div id="image-btn" class="col-12 col-md-8">
+			<div id="image-btn" class="col-12 col-md-12">
 				<button name="paper" id="paper"><img src="images/paper-btn.png"></button>
 				<button name="rock" id="rock"><img src="images/rock-btn.png"></button>
 				<button name="scissor" id="scissor"><img src="images/scissor-btn.png"></button>
