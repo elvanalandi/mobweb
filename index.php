@@ -2,10 +2,17 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Proyek Mobweb</title>
 	<link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+   
+	<link rel="stylesheet" href="styles.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="script.js"></script>
+
 	<style>
 
 	body{
@@ -138,6 +145,7 @@
 </style>
 </head>
 <body onload="load()">
+
 	<h1 class="title">ROCK PAPER SCISSORS</h1>
 	<div class="container" id="nickname_form">
 		<input type="text" id="nick" placeholder="nickname">
@@ -167,26 +175,62 @@
 				<button name="paper" id="paper"><img src="images/paper-btn.png"></button>
 				<button name="rock" id="rock"><img src="images/rock-btn.png"></button>
 				<button name="scissor" id="scissor"><img src="images/scissor-btn.png"></button>
+
+	<?php
+		include 'navbar.php';
+	?>
+	
+		<h1 style="text-align: center; font-size: 18pt;margin-top : 20px;">ROCK PAPER SCISSOR</h1>
+		<div class="container" id="nickname_form">
+			<input type="text" id="nick" placeholder="nickname">
+			<button id="submit">Submit nickname</button>
+		</div>
+		<div class="flex-container">
+			<div class="row">
+				<div class="col-6 col-md-4">
+					<h1>WIN</h1>
+					<h1 id="win-score">0</h1>
+				</div>
+				<div class="col-6 col-md-4">
+					<h1>TIES</h1>
+					<h1 id="tie-score">0</h1>
+				</div>
+				<div class="col-6 col-md-4">
+					<h1>LOSE</h1>
+					<h1 id="lose-score">0</h1>
+				</div>
+				<div class="col-8 col-md-6">
+					<div class="player-image"></div>
+				</div>
+				<div class="col-8 col-md-6">
+					<div class="bot-image"></div>
+				</div>
+				<div id="image-btn" class="col-12 col-md-8">
+					<button name="paper" id="paper"><img src="images/paper-btn.png"></button>
+					<button name="rock" id="rock"><img src="images/rock-btn.png"></button>
+					<button name="scissor" id="scissor"><img src="images/scissor-btn.png"></button>
+				</div>
+
 			</div>
 		</div>
-	</div>
-	<div class="container" id="highscore_form">
-		<h2 class="col-lg-12" style="text-align: center">High Score</h2>
-		<table class="table table-hover">
-			<thead>
-				<tr>
-					<th>Rank</th>
-					<th>Nickname</th>
-					<th>Score</th>
-				</tr>
-			</thead>
-			<tbody id="highfive">
-			</tbody>
-		</table>
-	</div>
-	<div class="col-lg-12" style="text-align: center;margin : 10px">
-		<button type="button" class="btn btn-primary" id="stop">Stop Playing</button>
-	</div>
+		<div class="container" id="highscore_form">
+			<h2 class="col-lg-12" style="text-align: center">High Score</h2>
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>Rank</th>
+						<th>Nickname</th>
+						<th>Score</th>
+					</tr>
+				</thead>
+				<tbody id="highfive">
+				</tbody>
+			</table>
+		</div>
+		<div class="col-lg-12" style="text-align: center;margin : 10px">
+			<button type="button" class="btn btn-primary" id="stop">Stop Playing</button>
+		</div>
+	
 	<script type="text/javascript">
 		var high=[];
 
