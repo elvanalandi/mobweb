@@ -6,10 +6,18 @@
 	<link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="styles.css">
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="script.js"></script>
+
 	<style>
 	</style>
 </head>
 <body onload="load()">
+	<?php
+		include 'navbar.php';
+	?>
 	<div class="container">
 		<h2 class="col-lg-12" style="text-align: center">High Score</h2>
 		<table class="table table-hover">
