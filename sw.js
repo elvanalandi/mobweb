@@ -9,12 +9,14 @@ self.addEventListener('install', function(event) {
           '/src/js/script.js',
           '/src/js/app.js',
           '/manifest.json',
-          '/src/images/paper-btn.PNG',
+          '/src/images/paper-btn.png',
           '/src/images/paper.png',
-          '/src/images/rock-btn.PNG',
+          '/src/images/rock-btn.png',
           '/src/images/rock.png',
-          '/src/images/scissor-btn.PNG',
+          '/src/images/scissor-btn.png',
           '/src/images/scissor.png',
+          '/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css',
+          '/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js'
         // etc
       ]);
     })
