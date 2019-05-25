@@ -6,7 +6,15 @@ self.addEventListener('install', function(event) {
           '/navbar.php',
           '/highscore.php',
           '/src/css/styles.css',
-          '/src/js/script.js'
+          '/src/js/script.js',
+          '/src/js/app.js',
+          '/manifest.json',
+          '/src/images/paper-btn.PNG',
+          '/src/images/paper.png',
+          '/src/images/rock-btn.PNG',
+          '/src/images/rock.png',
+          '/src/images/scissor-btn.PNG',
+          '/src/images/scissor.png',
         // etc
       ]);
     })
