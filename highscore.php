@@ -14,6 +14,8 @@
 
 	<!--PWA DEPENDANCIES -->
 	<link rel="js" type="/sw.js" href="">
+	<link rel="manifest" href="/manifest.json">
+	<script src="/src/js/app.js"></script>
 
 	<style>
 	</style>
@@ -36,6 +38,18 @@
 			</tbody>
 		</table>
 	</div>
+	<script>
+	  if ('serviceWorker' in navigator) {
+	    console.log("Will the service worker register?");
+	    navigator.serviceWorker.register('sw.js')
+	      .then(function(reg){
+	        console.log("Yes, it did.");
+	      }).catch(function(err) {
+	        console.log("No it didn't. This happened: ", err)
+	      });
+	  }
+	</script>
+	
 	<script type="text/javascript">
 		var high=[];
 

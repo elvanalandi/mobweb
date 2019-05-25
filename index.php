@@ -17,7 +17,7 @@
 	<!--PWA DEPENDANCIES -->
 	<link rel="js" type="/sw.js" href="">
 	<link rel="manifest" href="/manifest.json">
-	
+	<script src="/src/js/app.js"></script>
 	<style>
 
 	body{
