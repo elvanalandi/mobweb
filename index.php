@@ -16,7 +16,8 @@
 
 	<!--PWA DEPENDANCIES -->
 	<link rel="js" type="/sw.js" href="">
-
+	<link rel="manifest" href="/manifest.json">
+	
 	<style>
 
 	body{
@@ -173,6 +174,7 @@
 	}
 </style>
 </head>
+
 <body onload="load()">
 	<?php
 		include 'navbar.php';
