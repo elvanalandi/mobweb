@@ -3,13 +3,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Proyek Mobweb</title>
-	<link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js">
+	<link rel="stylesheet" href="/bootstrap/bootstrap-4.3.1-dist/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/bootstrap/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
-	<link rel="stylesheet" href="styles.css">
+	 <!-- NAVBAR DEPENDACIES  -->
+	<link rel="stylesheet" href="/src/css/styles.css">
 	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
-	<script src="script.js"></script>
+	<script src="/src/js/script.js"></script>
+
+	<!--PWA DEPENDANCIES -->
+	<link rel="js" type="/sw.js" href="">
 
 	<style>
 	</style>
